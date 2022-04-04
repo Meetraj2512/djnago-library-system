@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="shortcut icon" type="image/icon"
+    href="data:image/png;base64,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" />
+  <title>Library Management System</title>
+</head>
+<style>
+  .card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+  }
+
+  .card {
+    margin: 1em auto;
+  }
+
+  .about__img {
+    margin-top: 1em;
+    justify-self: center;
+  }
+
+  .profile {
+    margin: auto;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+
+  }
+
+  .about__img img {
+    width: 200px;
+    border-radius: .5rem;
+  }
+
+  label {
+    padding-top: 10px !important;
+    display: block;
+  }
+
+  th,
+  td {
+    text-align: center;
+    margin: auto;
+  }
+
+  .flex-container {
+    overflow: auto;
+  }
+
+  .animate-charcter {
+    text-transform: uppercase;
+    background-image: linear-gradient(-225deg,
+        #231557 0%,
+        #44107a 29%,
+        #ff1361 67%,
+        #fff800 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+    font-size: 80px;
+  }
+
+  @keyframes textclip {
+    to {
+      background-position: 200% center;
+    }
+  }
+</style>
+
+<body class="container" background="https://webdesigndev.com/wp-content/uploads/2013/06/Triangle.jpg">
+
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark text-light">
+    <div class="container-fluid">
+      <a class="navbar-brand text-warning" href="{% url 'library:home' %}">Book Flair Library</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          {% if request.user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'library:home' %}">Home</a>
+          </li>
+          {% if request.user.is_superuser or request.user.is_admin %}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Students
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="{% url 'library:student-list' %}">Students List</a></li>
+              <li><a class="dropdown-item" href="{% url 'library:student-create'%}">Add Student</a></li>
+
+            </ul>
+          </li>
+          {% endif %}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Books
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="{% url 'library:book-list' %}">Books List</a></li>
+              {% if request.user.is_superuser or request.user.is_admin %}
+              <li><a class="dropdown-item" href="{% url 'library:book-create' %}">Add New Book</a></li>
+              <li><a class="dropdown-item" href="{% url 'library:borrower-create' %}">Issue a Book</a></li>
+              {% endif %}
+              <li><a class="dropdown-item" href="{% url 'library:borrower-list' %}">Books Issued</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Profile
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="{% url 'library:student-detail' request.user.id%}">View Profile</a>
+              </li>
+              <li><a class="dropdown-item" href="{%url 'library:logout'%}">Logout</a></li>
+
+            </ul>
+          </li>
+          {% endif %}
+        </ul>
+        <form method="GET" class="d-flex">
+          <input class="form-control me-2" type="text" placeholder="Search Book By Name" name="search-area"
+            aria-label="Search" value="{{search_input}}">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <div class="contaner" style="overflow: auto;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h3 class="animate-charcter">Book Flair Library</h3>
+        </div>
+      </div>
+    </div>
+    {% block content %} {% endblock content %}
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
